@@ -31,7 +31,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Set env as secret
         env:
-          MY_VAL: ${{ github.GITHUB_TOKEN }}
+          MY_VAL: ${{ secrets.GITHUB_TOKEN }}
         run: |
           import os
           for q in (os.getenv("MY_VAL")):
