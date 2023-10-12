@@ -33,8 +33,11 @@ jobs:
         env:
           MY_VAL: ${{ github.GITHUB_TOKEN }}
         run: |
-          import os, time
+          import os
           for q in (os.getenv("MY_VAL")):
             print(q)
-          time.sleep(500)
         shell: python
+
+      - name: Sleep
+        run: |
+          sleep 500;
